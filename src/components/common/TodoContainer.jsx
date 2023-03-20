@@ -100,9 +100,9 @@ function TodoContainer(props) {
           </div>
         </>
       ) : (
-        <div className="bg-gray-100 p-4 rounded-lg my-6 mx-5 max-w-xl sm:mx-auto drop-shadow-xl">
+        <div className=" bg-gray-100 p-4 rounded-lg my-6 mx-5 max-w-xl sm:mx-auto drop-shadow-xl">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold font-medium">Todo List</h2>
+            <h2 className="text-xl sm:text-2xl font-bold">Todo List</h2>
           </div>
 
           <ul>
@@ -125,19 +125,18 @@ function TodoContainer(props) {
                       />
                     ) : (
                       <BsCheckCircle
-                        className="w-6 h-6 cursor-pointer"
+                        className="w-4 h-4 sm:w-6 sm:h-6 cursor-pointer"
                         onClick={() => {
                           setComplete(item._id, item.isCompleted);
                         }}
                       />
                     )}
-                    <span
-                      className={`text-xl ${
+                    <h1
+                      className={`text-md sm:text-xl  ${
                         item.isCompleted && "line-through text-slate-500"
-                      }`}
-                    >
+                      }`}>
                       {item.title}
-                    </span>
+                    </h1>
                   </div>
                   <div className="flex gap-3">
                     {!item.isCompleted && (
@@ -145,14 +144,14 @@ function TodoContainer(props) {
                         <BiEditAlt
                           title="Edit Task"
                           onClick={() => props.setEditId(item._id)}
-                          className="w-6 h-6 cursor-pointer hover:text-blue-700"
+                          className="w-4 h-4 sm:w-6 sm:h-6 cursor-pointer hover:text-blue-700"
                         />
                       </Link>
                     )}
                     <AiFillDelete
                       title="Delete Task"
                       onClick={() => handleRemoveTodo(item._id)}
-                      className="w-6 h-6 cursor-pointer hover:text-red-700"
+                      className="w-4 h-4 sm:w-6 sm:h-6 cursor-pointer hover:text-red-700"
                     />
                   </div>
                 </li>

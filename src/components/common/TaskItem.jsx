@@ -114,7 +114,7 @@ function TaskItem(props) {
             loadingScreen
           ) : (
             <>
-              <div className="bg-gray-100 p-4 rounded-lg max-w-2xl drop-shadow-lg mx-auto my-6">
+              <div className="bg-gray-100 p-4 rounded-lg max-w-2xl mx-5 drop-shadow-lg sm:mx-auto my-6">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-xl font-bold">Edit Details</h2>
                 </div>
